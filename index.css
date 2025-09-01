@@ -1,0 +1,132 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    background-image: url("istockphoto-525242101-612x612.jpg");
+}
+
+nav {
+    background-color: white;
+    font-size: 3.3rem;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    font-weight: 1000;
+    text-shadow: 2px 2px 2px;
+    padding: 15px;
+}
+
+nav:hover {
+    background-color: black;
+    color: white;
+    text-shadow: 4px 3px 2px rgb(230, 20, 20);
+
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    perspective: 1000px;
+}
+
+.flipper {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    position: relative;
+    transform: rotateY(180deg);
+}
+
+.container:hover .flipper {
+    transform: rotateY(0deg);
+}
+
+.back {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 2.9rem;
+    transform: rotateY(180deg);
+    height: 500px;
+    width: 400px;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    border: 5px solid rgb(255, 255, 255);
+    background: linear-gradient(rgb(0, 0, 0), rgb(87, 87, 87), rgb(0, 0, 0));
+    box-sizing: border-box;
+    padding: 0px 35px;
+}
+p{
+    margin: 15px 0px;
+}
+
+.front {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(rgb(0, 0, 0), black, rgb(87, 87, 87), rgb(0, 0, 0));
+    height: 500px;
+    width: 400px;
+    border-radius: 10px;
+    border: 5px solid rgb(255, 255, 255);
+    backface-visibility: hidden;
+}
+
+.result {
+    background-color: rgb(255, 255, 255);
+    margin: 15px;
+    height: 140px;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 3rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0px 15px 15px;
+    flex: 1;
+}
+
+.btn {
+    background-color: rgb(223, 226, 228);
+    margin: 5px;
+    border-radius: 20px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale(1.02);
+    background-color: white;
+}
+
+.AC {
+    background-color: rgb(255, 115, 0);
+    transition: 0.2s;
+}
+
+.AC:hover {
+    transform: scale(1.02);
+    background-color: rgb(255, 0, 0);
+}
+
+.equal {
+    background-color: rgb(38, 255, 0);
+    transition: 0.2s;
+}
+
+.equal:hover {
+    transform: scale(1.02);
+    background-color: rgb(115, 255, 0);
+}
