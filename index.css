@@ -23,12 +23,13 @@ nav:hover {
 
 .main {
     display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
 }
 
+/* Calculator */
+
 .container {
+    margin: 15px;
     perspective: 1000px;
 }
 
@@ -38,7 +39,7 @@ nav:hover {
     transition: transform 0.8s;
     transform-style: preserve-3d;
     position: relative;
-    transform: rotateY(180deg);
+    /* transform: rotateY(180deg); */
 }
 
 .container:hover .flipper {
@@ -129,4 +130,18 @@ p{
 .equal:hover {
     transform: scale(1.02);
     background-color: rgb(115, 255, 0);
+}
+
+/* TO-DO-List */
+
+.fronttodo{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(rgb(0, 0, 0),rgb(110, 180, 255), rgb(0, 0, 0));
+    height: 500px;
+    width: 400px;
+    border-radius: 10px;
+    border: 5px solid rgb(255, 255, 255);
+    backface-visibility: hidden;
 }
