@@ -10,7 +10,7 @@ function equal(){
     }
 }
 
-document.addEventListener("keydown",(e)=>{
+document.querySelector(".front").addEventListener("keydown",(e)=>{
     if(e.key==="Enter"){
         e.preventDefault();
         equal();
@@ -41,4 +41,29 @@ document.querySelectorAll(".btn").forEach(btn=>{
             resultBox.textContent +=val;
         }
     })
+})
+
+
+let add= document.querySelector(".add");
+add.addEventListener("click",()=>{
+    let text=document.querySelector("#text");
+    if(text.value==""){
+        let hidden= document.querySelector(".hidden");
+        hidden.classList.add("show");
+        setTimeout(() => {
+            hidden.classList.remove("show");
+        }, 2000);
+    }
+    else{
+        let html= `<div class="card">
+                            <div class="left">
+                                <input type="checkbox" id="tick">
+                                <p>${text.value}</p>
+                            </div>
+                            
+                            <button class="cross">X</button>
+                        </div>`
+        document.querySelector(".tasks").innerHTML+= html;
+        text.value="";
+    }
 })
