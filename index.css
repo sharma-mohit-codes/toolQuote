@@ -1,23 +1,24 @@
 body {
     padding: 0px;
     margin: 0px;
-    background-image: url("istockphoto-525242101-612x612.jpg");
+    background-image: url("thumb-1920-1379559.png");
 }
 
 nav {
-    background-color: white;
+    background-color: black;
     font-size: 3.3rem;
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
     font-weight: 1000;
-    text-shadow: 2px 2px 2px;
     padding: 15px;
+    color: white;
+    text-shadow: 0px 0px 18px rgb(230, 20, 20);
 }
 
 nav:hover {
-    background-color: black;
-    color: white;
-    text-shadow: 4px 3px 2px rgb(230, 20, 20);
+    background-color: white;
+    text-shadow: 0px 0px 5px rgb(255, 0, 0);
+    color: black;
 
 }
 
