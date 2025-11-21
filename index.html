@@ -13,6 +13,49 @@
         theToolQuote
     </nav>
     <div class="main">
+
+        <div class="container" id="weatherContainerWrapper">
+            <div class="flipper">
+                <!-- FRONT: quote -->
+                <div class="front" style="align-items: center; justify-content: center; font-size: 2.6rem; text-align: center;background: rgba(22, 27, 34, 0.85);
+    border: 1px solid #30363d;">
+                    <p style="color: rgb(255, 255, 255);">Cloudy days remind us that <em>clarity</em> always returns —
+                    </p>
+                    <p style="color: burlywood">The sun only waits,<em> never disappears.</em></p>
+                </div>
+
+                <div class="back" id="weatherBack">
+                    <div class="weather-ui">
+                        <div class="weather-head">
+                            <div class="loc">Detecting location…</div>
+                            <button class="small-btn" id="refreshWeather" title="Refresh weather">⟳</button>
+                        </div>
+                        <div class="current-row">
+                            <div class="temp"><span class="value">--</span>°C</div>
+                            <div class="cur-right">
+                                <div class="desc">--</div>
+                                <div class="meta">
+                                    <span class="hum">H: --%</span>
+                                    <span class="wind">W: -- m/s</span>
+                                    <span class="prec">P: --%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="hourly-title">Next 24 hours</div>
+                        <div class="hourly-scroll" id="hourlyContainer" aria-live="polite">
+                        </div>
+
+                        <div class="weather-footer">
+                            <input id="cityInput" placeholder="Or type a city and press Enter" />
+                            <div class="attribution">Data: OpenWeatherMap</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
         <div class="container">
             <div class="flipper">
                 <div class="front">
@@ -39,7 +82,10 @@
                     </div>
                 </div>
                 <div class="back">
-                    <p>Life <em style="color: burlywood;">turn the tables</em> to solve your problems—</p><p>So, don’t be stucked on the <em style="color: rgb(255, 64, 0);">wrong side.</em></p>
+                    <p>Life <em style="color: burlywood;">turn the tables</em> to solve your problems—
+                    </p>
+                    <p>So, don’t be stucked on the <em style="color: rgb(255, 64, 0);">wrong side.</em>
+                    </p>
                 </div>
             </div>
         </div>
@@ -51,17 +97,20 @@
                     </div>
                     <div class="input">
                         <input type="text" placeholder="Add a new task..." id="text">
-                        
+
                         <button class="add">Add</button>
                     </div>
-                    
+
                     <div class="tasks">
-                        
+
                     </div>
                 </div>
-                <div class="back" id="backtodo">
-                    <p style="color: black;">Stay <em style="color: #ff0000;">organized</em> and keep your tasks in check—</p>
-<p style="color: black;">Small steps <em style="color: #0077b6;">today</em> lead to big <em style="color: rgb(255, 140, 0);">achievements</em> <em style="color: #1a1a1a;">tomorrow.</em></p>
+                <div class="back">
+                    <p style="color: rgb(255, 255, 255);">Stay <em>organized</em> and keep
+                        your tasks
+                        in check—</p>
+                    <p style="color: burlywood">Small steps <em>today</em> lead to
+                        big <em>achievements</em> <em>tomorrow.</em></p>
 
                 </div>
             </div>
