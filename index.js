@@ -112,9 +112,9 @@ function equal() {
   
   // -------------------
   // Weather widget
-// Weather widget - FIXED VERSION
+
 (async () => {
-    const KEY = "44dab527474811d0954fe6f842379fcf";
+    const KEY = window.env.Weather_Key;
     const wrap = document.getElementById("weatherContainerWrapper");
     if (!wrap) return;
     
