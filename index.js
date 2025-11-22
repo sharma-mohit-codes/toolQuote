@@ -1,9 +1,14 @@
+//Mode
+document.querySelector(".mode").addEventListener("click",()=>{
+  document.body.classList.toggle("light");
+});
+
+
 // Calculator logic
 function equal() {
     let expr = resultBox.textContent;
     expr = expr.replace(/×/g, "*").replace(/÷/g, "/");
     try {
-      // eslint-disable-next-line no-eval
       resultBox.textContent = eval(expr);
     } catch {
       resultBox.textContent = "Error";

@@ -4,23 +4,57 @@ body {
     background: #0d1117;
     color: #e6edf3;
 }
-
-nav {
+body.light{
+    background: #ffffff;
+}
+.head {
     background: #161b22;
     font-size: 3.3rem;
     font-family: 'Courier New', monospace;
     text-align: center;
     font-weight: 1000;
-    padding: 15px;
     color: #58a6ff;
     text-shadow: 0px 0px 8px #1f6feb;
+    cursor:default;
 }
 
-nav:hover {
+body.light .head{
+    background:#c8e8ff ;
+    color: #052acc;
+    text-shadow: 0px 0px 8px #58a6ff;
+}
+body.light .head:hover{
+    color: #02275e;
+    text-shadow: 0px 0px 8px #2c8dfc;
+}
+
+.head:hover {
     color: #79c0ff;
     text-shadow: 0px 0px 12px #238dfa;
 }
 
+nav{
+    background: #161b22;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+}
+body.light nav{
+    background: #c8e8ff;
+}
+.mode{
+    position: absolute;
+    right: 20px;
+    top: 30px;
+    cursor: pointer;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+}
+
+
+.mode img{
+    width: 40px;
+}
 .main {
     display: flex;
     flex-wrap: wrap;
@@ -84,6 +118,9 @@ p {
     box-sizing: border-box;
 }
 
+body.light .front{
+    background:#d3d3d3;
+}
 .result {
     background: #0e1520;
     color: #d8e2ec;
@@ -99,7 +136,7 @@ p {
     overflow: hidden;
 }
 
-.buttons {
+.buttons{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin: 0px 15px 15px;
